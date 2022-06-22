@@ -169,5 +169,20 @@
     "prefix": "ifmain",
     "body": "if __name__ == \"__main__\":\n\t${1:main()}$0",
     "description": "Create implicitly all the code at the top level using the __name__ special variable."
+  },
+  "parametrize": {
+    "prefix": "parametrize",
+    "body": "@pytest.mark.parametrize(\"param\", [(), ()])$0",
+    "description": "Code snippet for a parametrized pytest test."
+  },
+  "parametrize_random": {
+    "prefix": "parametrize_random",
+    "body": "@pytest.mark.parametrize(\"uid\", range(${1:n}))$0",
+    "description": "Code snippet for a parametrized pytest test."
+  },
+  "typeguard": {
+    "prefix": "typeguard",
+    "body": "def ${1:func}(value: object) -> TypeGuard[${2:type}]:\n\treturn True$0",
+    "description": "Create a typeguard to check type of a complex variable"
   }
 }
